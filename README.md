@@ -26,11 +26,11 @@ A task record looks like this (comments included):
 ```
 
 For our case, the most meaningful way of visualizing the data is [Gantt](https://en.wikipedia.org/wiki/Gantt_chart) chart.
-Your task is to create a HTML/JS application implementing the Gantt chart type visualization of the schedule based on data from the JSON file. We recommend using following Gantt library (ALICE app is using the same library):
+Your task is to create an HTML/JS application implementing the Gantt chart type visualization of the schedule based on data from the JSON file. We recommend using following Gantt library (ALICE app is using the same library):
 
 * [JavaScript Gantt Chart Library - DHTMLX Gantt](https://dhtmlx.com/docs/products/dhtmlxGantt/)
 
-###Additionally:
+### Additionally:
 
 Show dependencies between tasks, preferably by utilizing a setting of the Gantt library. Consider all possibilities in which the dependencies can be visualized, pick the one you find the most feasible. Explain your thought process.
 Visualize the Equipment and Crew data for each task in a feasible way.

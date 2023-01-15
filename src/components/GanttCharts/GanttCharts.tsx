@@ -7,9 +7,13 @@ interface GanttChartsProps {
   dataToParse: Record<any, any>
 }
 const GanttCharts = ({dataToParse} : GanttChartsProps) => {
-  const inputRef = useRef(null) ;
+  const inputRef = useRef(null);
 
   useEffect(() => {
+    // tbd multiple scales options
+    gantt.config.scales = [
+      {unit: "day", format: "%d %M"}
+    ];
     gantt.init(inputRef.current as unknown as HTMLElement);
     gantt.parse(dataToParse)
   }, [dataToParse])

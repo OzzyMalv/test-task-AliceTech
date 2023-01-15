@@ -1,46 +1,37 @@
-# Getting Started with Create React App
+# Alice Technologies test task 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description 
 
-## Available Scripts
+You are a flow visualization specialist in a construction company tasked with visualization of the schedule of planned construction in the most meaningful way.
+The project consists of a series of tasks included as a JSON file.
+A task record looks like this (comments included):
+```json5
+{
+    "taskCode" : "A169894767",          // unique task identifier
+    "operationName" : "Pour Concrete",  // 
+    "elementName" : "B1_C_L5_Floor",    // 
+    "duration" : 8,                     // the duration this task takes to complete, in time units
+    "startHours" : 126,                 // starting hour of this task execution
+    "endHours" : 134,                   // ending hour of this task execution
+    "crew" : {
+        "name" : "C_Concrete Crew",     // the type of the crew this task needs
+            "assignment" : 1                // the number of crew members this task needs to be allocated to it for the whole task duration
+    }, 
+    "equipment" : [{                   // additional resources necessary
+        "name" : "Concrete Pump", 
+        "quantity" : 1
+       }], 
+    "dependencies" : [ "A1137546159" ] // all task codes of tasks that need to be completed before this task can start
+    }
+```
 
-In the project directory, you can run:
+For our case, the most meaningful way of visualizing the data is [Gantt](https://en.wikipedia.org/wiki/Gantt_chart) chart.
+Your task is to create a HTML/JS application implementing the Gantt chart type visualization of the schedule based on data from the JSON file. We recommend using following Gantt library (ALICE app is using the same library):
 
-### `npm start`
+* [JavaScript Gantt Chart Library - DHTMLX Gantt](https://dhtmlx.com/docs/products/dhtmlxGantt/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+###Additionally:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Show dependencies between tasks, preferably by utilizing a setting of the Gantt library. Consider all possibilities in which the dependencies can be visualized, pick the one you find the most feasible. Explain your thought process.
+Visualize the Equipment and Crew data for each task in a feasible way.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).

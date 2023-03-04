@@ -22,7 +22,7 @@ A task record looks like this (comments included):
         "quantity" : 1
        }], 
     "dependencies" : [ "A1137546159" ] // all task codes of tasks that need to be completed before this task can start
-    }
+}
 ```
 
 For our case, the most meaningful way of visualizing the data is [Gantt](https://en.wikipedia.org/wiki/Gantt_chart) chart.

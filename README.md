@@ -1,6 +1,11 @@
 # Alice Technologies test task 
 
-## Description 
+## How to run
+
+1. `npm i`
+2. `npm start`
+
+### Description 
 
 You are a flow visualization specialist in a construction company tasked with visualization of the schedule of planned construction in the most meaningful way.
 The project consists of a series of tasks included as a JSON file.
